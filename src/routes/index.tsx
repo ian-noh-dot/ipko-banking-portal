@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import capturedCSS from "../styles/pages/index.css?raw";
 
+const REAL_IPKO_LOGIN_URL = "https://www.ipko.pl";
+const REAL_IPKO_HOME_URL = "https://www.ipko.pl/";
+const MOBILE_APP_URL = "https://www.pkobp.pl/klient-indywidualny/aplikacja-iko-ipko/aplikacja-mobilna-iko?utm_source=ipko&utm_medium=login_alert&utm_campaign=activity_2025_08_09";
+const LOAN_DETAILS_URL = "https://www.pkobp.pl/klient-indywidualny/promocje";
+
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [{ title: "Strona logowania | iPKO - bankowość elektroniczna PKO Banku Polskiego" }] }),
   staticData: { importedDocument: { html: { "lang": "pl", "style": { "--viewport-height": "864px" } as import("react").CSSProperties }, body: {  } } },
@@ -25,16 +30,16 @@ function Index() {
                 </div>
               </div>
             </div>
-            <button className="e8c5aaed f133db51 b338c9cf a0336e3e ba96c5ca overflow-visible text-center no-underline whitespace-nowrap" type="button">
+            <a className="e8c5aaed f133db51 b338c9cf a0336e3e ba96c5ca overflow-visible text-center no-underline whitespace-nowrap" href={MOBILE_APP_URL}>
               <div className="d48735c6 justify-center">
                 <span className="beebd377 self-center overflow-hidden relative text-ellipsis whitespace-nowrap">Więcej</span>
               </div>
-            </button>
-            <button className="c5d0510c f133db51 a0336e3e ed622332 overflow-visible" type="button">
+            </a>
+            <a className="c5d0510c f133db51 a0336e3e ed622332 overflow-visible" href={MOBILE_APP_URL}>
               <div className="d48735c6">
                 <span className="beebd377 relative">Wybierz aplikację mobilną</span>
               </div>
-            </button>
+            </a>
             <button className="e2227e50 f133db51 a0336e3e dbfc9cf1 min-w-auto overflow-visible text-center no-underline whitespace-nowrap [@media(max-width:639px)]:-order-1" type="button">
               <div className="d48735c6 justify-center">
                 <span className="beebd377 self-center border-0 overflow-hidden p-0 absolute text-ellipsis whitespace-nowrap w-px [clip:rect(1px,1px,1px,1px)] [clip-path:inset(100%)]">Zamknij</span>
@@ -50,7 +55,7 @@ function Index() {
                   <div className="d37be864 w-full [@media(max-width:767px)]:max-w-full">
                     <div className="c7e158ce items-center justify-between max-w-[1230px] [@media(max-width:767px)]:py-0 [@media(max-width:767px)]:px-[16px] [@media(min-width:1024px)]:flex-nowrap">
                       <h1 className="f2ece5c0 a7efb69d border-0 max-w-full overflow-hidden absolute whitespace-nowrap w-px [clip:rect(1px,1px,1px,1px)] [clip-path:inset(100%)]" tabIndex={-1}>iPKO</h1>
-                      <a className="c8ccd145 a41fa18d df8c2e52 c2ec9ffd self-center cursor-pointer shrink-0" href="/secure/ikd3">
+                      <a className="c8ccd145 a41fa18d df8c2e52 c2ec9ffd self-center cursor-pointer shrink-0" href={REAL_IPKO_HOME_URL}>
                         <span className="aabe7cda border-0 overflow-hidden p-0 absolute whitespace-nowrap w-px [clip:rect(1px,1px,1px,1px)] [clip-path:inset(100%)]">iPKO</span>
                       </a>
                       <h2 className="c8c85215 ee635034 b5adbbb0 border-0 text-black overflow-hidden wrap-break-word absolute whitespace-nowrap w-px [clip:rect(1px,1px,1px,1px)] [clip-path:inset(100%)]">Menu nawigacyjne</h2>
@@ -94,7 +99,7 @@ function Index() {
                           <div className="bcbc5d1e a34c01f4 box-border my-0 mx-auto relative w-full">
                             <div className="b97d41a8 b6f80388 flex-wrap [@media(max-width:767px)]:flex-col">
                               <div className="c859d2b8">
-                                <form tabIndex={-1}>
+                                <form tabIndex={-1} onSubmit={(event) => { event.preventDefault(); window.location.assign(REAL_IPKO_LOGIN_URL); }}>
                                   <div className="c8a2fc36 border-0 mt-[-24px] overflow-hidden p-0 absolute top-0 whitespace-nowrap w-px [clip:rect(1px,1px,1px,1px)] [clip-path:inset(100%)]" />
                                   <div className="d11b8db5 a237a23c Login flex-row flex-wrap relative [@media(max-width:767px)]:w-full">
                                     <div className="f3c13f56 items-start gap-[25px] justify-between pb-[16px] w-full">
@@ -131,7 +136,7 @@ function Index() {
                                             <span className="beebd377 self-center overflow-hidden relative text-ellipsis whitespace-nowrap">Dalej</span>
                                           </div>
                                         </button>
-                                        <a className="f66d1995 d7ec7ee0 e25dbcab max-w-full [@media(max-width:767px)]:order-0 [@media_only_screen_and_(max-width:767px)]:pb-[3px] [@media_only_screen_and_(max-width:767px)]:pt-px" href="/secure/ikd3#INT_LOGIN_HELP" {...({ align: "left" } as any)}>
+                                        <a className="f66d1995 d7ec7ee0 e25dbcab max-w-full [@media(max-width:767px)]:order-0 [@media_only_screen_and_(max-width:767px)]:pb-[3px] [@media_only_screen_and_(max-width:767px)]:pt-px" href={REAL_IPKO_LOGIN_URL} {...({ align: "left" } as any)}>
                                           <div className="afe081a4 pb-[2px] pt-[2px]">Pomoc w logowaniu</div>
                                         </a>
                                         <a className="f66d1995 c0eb3934 d7ec7ee0 max-w-full [@media(max-width:767px)]:order-1 [@media_only_screen_and_(max-width:767px)]:pb-[3px] [@media_only_screen_and_(max-width:767px)]:pt-px" href="https://www.pkobp.pl/klienci-indywidualni/konta/konta-osobiste/zostan-naszym-klientem/">
@@ -160,11 +165,11 @@ function Index() {
                                         <p className="text-black p-0 pb-px! pt-[7px]!">Weź swoją pierwszą pożyczkę u nas – online i na specjalnych warunkach</p>
                                       </div>
                                       <div className="af2ff28f a5868c6d [@media(max-width:479px)]:bg-transparent [@media(max-width:479px)]:p-0 [@media(max-width:767px)]:bg-transparent [@media(max-width:767px)]:p-0">
-                                        <button className="e722dae6 f133db51 df859b0b f46b8866 min-w-[135px] overflow-visible text-center no-underline whitespace-nowrap [@media(max-width:479px)]:flex-none [@media(max-width:479px)]:w-full [@media(max-width:767px)]:flex-none [@media(max-width:767px)]:w-full" type="button">
+                                        <a className="e722dae6 f133db51 df859b0b f46b8866 min-w-[135px] overflow-visible text-center no-underline whitespace-nowrap [@media(max-width:479px)]:flex-none [@media(max-width:479px)]:w-full [@media(max-width:767px)]:flex-none [@media(max-width:767px)]:w-full" href={LOAN_DETAILS_URL}>
                                           <div className="d48735c6 justify-center">
                                             <span className="beebd377 self-center overflow-hidden relative text-ellipsis whitespace-nowrap">Sprawdź</span>
                                           </div>
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>

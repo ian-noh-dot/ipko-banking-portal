@@ -37,7 +37,7 @@ function Index() {
                     <div className="e074eb29 a0a6a1e7 grow py-[8px] px-0 w-full">
                       <div className="hidden pt-[47px] [border-bottom:1px_solid_rgb(229,229,229)]" />
                       <div className="fcbf00ac flex justify-end">
-                        <a className={"e722dae6 f133db51 c21d58dd b389eff2 box-border min-w-[135px] text-center no-underline whitespace-nowrap [&:not(:disabled)]:[&:focus-visible]:[&:not(:active)]:cursor-pointer [@media(hover:hover)]:[&:not(:disabled)]:[&:hover]:[&:not(:active)]:cursor-pointer [@media(hover:none)]:[&:not(:disabled)]:[&:hover]:[&:active]:cursor-pointer [@media(max-width:767px)]:flex-[0_1_100%]"} href="/">
+                        <a className={"e722dae6 f133db51 c21d58dd b389eff2 box-border min-w-[135px] text-center no-underline whitespace-nowrap [&:not(:disabled)]:[&:focus-visible]:[&:not(:active)]:cursor-pointer [@media(hover:hover)]:[&:not(:disabled)]:[&:hover]:[&:not(:active)]:cursor-pointer [@media(hover:none)]:[&:not(:disabled)]:[&:hover]:[&:active]:cursor-pointer [@media(max-width:767px)]:flex-[0_1_100%]"} href="https://www.ipko.pl">
                           <div className="flex justify-center">
                             <span className="self-center overflow-hidden relative text-ellipsis whitespace-nowrap">Przejdź do logowania</span>
                           </div>
